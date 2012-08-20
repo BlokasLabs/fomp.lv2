@@ -1,0 +1,10 @@
+This is an LV2 port of the MCP and VCO LADSPA plugins by Fons Adriaensen.
+
+It features more precise plugin descriptions (in particular, CV ports are
+distinct from audio ports, and unit metadata is available), but otherwise
+remains faithful to the originals.  The code is identical to the original
+LADSPA versions except for some type changes which should not affect output.
+These plugins should be sonically indestinguishable from the originals.
+
+Documentation for each plugin is included in the plugin's data file, and should
+be available as online help in the host interface.

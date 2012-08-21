@@ -73,9 +73,11 @@ def build(bld):
         LIB_EXT      = bld.env.pluginlib_EXT,
         install_path = '${LV2DIR}/fomp.lv2')
 
-    plugins = ['blvco',
+    plugins = ['autowah',
+               'blvco',
                'cs_chorus',
                'cs_phaser',
+               'filters',
                'mvchpf24',
                'mvclpf24']
     for i in plugins:

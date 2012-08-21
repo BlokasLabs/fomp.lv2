@@ -78,3 +78,13 @@ fomp:rec_vco
 	a lv2:Plugin ;
 	rdfs:seeAlso <rec_vco.ttl> ;
 	lv2:binary <blvco@LIB_EXT@> .
+
+fomp:parametric1
+	a lv2:Plugin ;
+	rdfs:seeAlso <parametric1.ttl> ;
+	lv2:binary <filters@LIB_EXT@> .
+
+fomp:autowah
+	a lv2:Plugin ;
+	rdfs:seeAlso <autowah.ttl> ;
+	lv2:binary <autowah@LIB_EXT@> .

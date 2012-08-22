@@ -69,7 +69,7 @@ instantiate2(const LV2_Descriptor*     descriptor,
              const char*               bundle_path,
              const LV2_Feature* const* features)
 {
-	return new Ladspa_Moogvcf1(rate);
+	return new Ladspa_Moogvcf2(rate);
 }
 static LV2_Handle
 instantiate3(const LV2_Descriptor*     descriptor,
@@ -77,7 +77,7 @@ instantiate3(const LV2_Descriptor*     descriptor,
              const char*               bundle_path,
              const LV2_Feature* const* features)
 {
-	return new Ladspa_Moogvcf1(rate);
+	return new Ladspa_Moogvcf3(rate);
 }
 static LV2_Handle
 instantiate4(const LV2_Descriptor*     descriptor,
@@ -85,7 +85,7 @@ instantiate4(const LV2_Descriptor*     descriptor,
              const char*               bundle_path,
              const LV2_Feature* const* features)
 {
-	return new Ladspa_Moogvcf1(rate);
+	return new Ladspa_Moogvcf4(rate);
 }
 
 static const LV2_Descriptor descriptors[4] = {

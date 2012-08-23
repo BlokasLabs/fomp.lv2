@@ -26,16 +26,14 @@
 /* This class name is now a misnomer but I have left it as-is to minimize
    fragmentation.  The following typedefs serve the same purpose, so the
    plugins can be built with the correct LV2 type (e.g. uint32_t instead of
-   unsigned long) but the actual DSP code has only been changed to use the
-   typedef rather than 'hard' switching it to the new type.  This way, it
-   should be straightforward to make the same code build as both LADSPA and LV2
-   plugins, though since the upstream situation is unclear I have not done
-   done so.  ~ David Robillard, Aug. 2012 */
+   unsigned long) without 'hard' switching the DSP code to the new type.  This
+   way, it should be straightforward to make the same code build as both LADSPA
+   and LV2 plugins, should the packages merge. ~ David Robillard, Aug. 2012 */
 
-typedef unsigned long SampleRate;
-typedef unsigned long SampleCount;
-typedef unsigned long PortIndex;
-typedef void          PortData;
+typedef double   SampleRate;
+typedef uint32_t SampleCount;
+typedef uint32_t PortIndex;
+typedef void     PortData;
 
 class LadspaPlugin
 {

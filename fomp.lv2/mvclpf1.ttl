@@ -25,16 +25,6 @@ fomp:mvclpf1
 		lv2:name "Output" ;
 		lv2:symbol "out"
 	] , [
-		a lv2:ControlPort ,
-			lv2:InputPort ;
-		lv2:default 0.0 ;
-		lv2:index 10 ;
-		lv2:maximum 15.0 ;
-		lv2:minimum -15.0 ;
-		lv2:name "Output gain" ;
-		lv2:symbol "out_gain" ;
-		units:unit units:db
-	] , [
 		a lv2:CVPort ,
 			lv2:InputPort ;
 		lv2:index 2 ;
@@ -97,5 +87,15 @@ fomp:mvclpf1
 		lv2:minimum 0.0 ;
 		lv2:name "Resonance gain" ;
 		lv2:symbol "res_gain"
+	] , [
+		a lv2:ControlPort ,
+			lv2:InputPort ;
+		lv2:default 0.0 ;
+		lv2:index 10 ;
+		lv2:maximum 15.0 ;
+		lv2:minimum -15.0 ;
+		lv2:name "Output gain" ;
+		lv2:symbol "out_gain" ;
+		units:unit units:db
 	] ;
 	rdfs:comment "A fairly simple design which does not even pretend to come close the 'real thing'.  It uses a very crude approximation of the non-linear resistor in the first filter section only.  Retained in this distribution because it's a cheap (in terms of CPU usage) general purpose 24 dB/oct lowpass filter that could be useful." .

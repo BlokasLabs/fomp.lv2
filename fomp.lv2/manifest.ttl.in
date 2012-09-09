@@ -21,7 +21,7 @@ fomp:
 	doap:developer [
 		a foaf:Person ;
 		foaf:name "Fons Adriaensen" ;
-		foaf:mbox <mailto:fons@kokkinizita.net>
+		foaf:mbox <mailto:fons@linuxaudio.org>
 	] .
 
 fomp:mvclpf1

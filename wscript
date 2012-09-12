@@ -1,19 +1,16 @@
 #!/usr/bin/env python
 import os
 import shutil
-import subprocess
-from waflib.extras import autowaf as autowaf
+import waflib.extras.autowaf as autowaf
 
 # Version of this package (even if built as a child)
 FOMP_VERSION = '0.0.0'
 
-# Variables for 'waf dist'
-APPNAME = 'fomp.lv2'
-VERSION = FOMP_VERSION
-
-# Mandatory variables
-top = '.'
-out = 'build'
+# Mandatory waf variables
+APPNAME = 'fomp'        # Package name for waf dist
+VERSION = FOMP_VERSION  # Package version for waf dist
+top     = '.'           # Source directory
+out     = 'build'       # Build directory
 
 def options(opt):
     opt.load('compiler_cxx')

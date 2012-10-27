@@ -44,6 +44,8 @@ static float _pulse [] =
 };
 
 
+static const float lg2midc = log2f(261.63f);
+
 
 void Ladspa_VCO_pulse1::setport (PortIndex port, PortData *data)
 {
@@ -86,7 +88,7 @@ void Ladspa_VCO_pulse1::runproc (SampleCount len, bool add)
         linm += n;
         len -= n;
  
-        t = (exp2ap (*freq + _port[OCTN][0] + _port[TUNE][0] + *expm * _port[EXPG][0] + 8.03136)
+        t = (exp2ap (log2f(*freq) - lg2midc + _port[OCTN][0] + _port[TUNE][0] + *expm * _port[EXPG][0] + 8.03136)
 	     + 1e3 * *linm * _port[LING][0]) / _fsam; 
         if (t < 1e-5) t = 1e-5;
         if (t > 0.5) t = 0.5;
@@ -176,7 +178,7 @@ void Ladspa_VCO_saw1::runproc (SampleCount len, bool add)
         linm += n;
         len -= n;
  
-        t = (exp2ap (*freq + _port[OCTN][0] + _port[TUNE][0] + *expm * _port[EXPG][0] + 8.03136 + d)
+        t = (exp2ap (log2f(*freq) - lg2midc + _port[OCTN][0] + _port[TUNE][0] + *expm * _port[EXPG][0] + 8.03136 + d)
 	     + 1e3 * *linm * _port[LING][0]) / _fsam; 
         if (t < 1e-5) t = 1e-5;
         if (t > 0.5) t = 0.5;
@@ -276,7 +278,7 @@ void Ladspa_VCO_rec1::runproc (SampleCount len, bool add)
         wavm += n;
         len -= n;
  
-        t = (exp2ap (*freq + _port[OCTN][0] + _port[TUNE][0] + *expm * _port[EXPG][0] + 8.03136 + d)
+        t = (exp2ap (log2f(*freq) - lg2midc + _port[OCTN][0] + _port[TUNE][0] + *expm * _port[EXPG][0] + 8.03136 + d)
 	     + 1e3 * *linm * _port[LING][0]) / _fsam; 
         if (t < 1e-5) t = 1e-5;
         if (t > 0.5) t = 0.5;

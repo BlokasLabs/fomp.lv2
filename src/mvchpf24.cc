@@ -23,6 +23,9 @@
 #include "exp2ap.h"
 
 
+static const float lg2midc = log2f(261.63f);
+
+
 void Ladspa_Mvchpf1::setport (PortIndex port, PortData *data)
 {
     _port [port] = (float*)data;
@@ -65,7 +68,7 @@ void Ladspa_Mvchpf1::runproc (SampleCount len, bool add)
         p3 += k;
         len -= k;
 
-        t = _fsam / exp2ap (_port [CFMOD][0] * *p3 + *p2 + _port [CFREQ][0] + 9.2f);
+        t = _fsam / exp2ap (_port [CFMOD][0] * *p3 + *p2 + log2f(_port [CFREQ][0]) - lg2midc + 9.2f);
         if (t < 2) t = 2;
         dw = (t - w) / k;
 

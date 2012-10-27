@@ -23,6 +23,9 @@
 #include "exp2ap.h"
 
 
+static const float lg2midc = log2f(261.63f);
+
+
 void Ladspa_Moogvcf1::setport (PortIndex port, PortData *data)
 {
 	_port [port] = (float*)data;
@@ -67,7 +70,7 @@ void Ladspa_Moogvcf1::runproc (SampleCount len, bool add)
         p4 += k;
         len -= k;
 
-        t = exp2ap (_port [C_FMODG][0] * *p3 + _port [C_FREQ][0] + *p2 + 10.82f) / _fsam;
+        t = exp2ap (_port [C_FMODG][0] * *p3 + log2f(_port [C_FREQ][0]) - lg2midc + *p2 + 10.82f) / _fsam;
 	if (t < 0.8f) t *= 1 - 0.4f * t - 0.125f * t * t;
         else 
 	{
@@ -154,7 +157,7 @@ void Ladspa_Moogvcf2::runproc (SampleCount len, bool add)
         p4 += k;
         len -= k;
 
-        t = exp2ap (_port [C_FMODG][0] * *p3 + _port [C_FREQ][0] + *p2 + 10.71f) / _fsam;
+        t = exp2ap (_port [C_FMODG][0] * *p3 + log2f(_port [C_FREQ][0]) - lg2midc + *p2 + 10.71f) / _fsam;
 	if (t < 0.8f) t *= 1 - 0.4f * t - 0.125f * t * t;
         else 
 	{
@@ -243,7 +246,7 @@ void Ladspa_Moogvcf3::runproc (SampleCount len, bool add)
         p4 += k;
         len -= k;
 
-        t = exp2ap (_port [C_FMODG][0] * *p3 + _port [C_FREQ][0] + *p2 + 9.70f) / _fsam;
+        t = exp2ap (_port [C_FMODG][0] * *p3 + log2f(_port [C_FREQ][0]) - lg2midc + *p2 + 9.70f) / _fsam;
         if (t < 0.75f) t *= 1.005f - t * (0.624f - t * (0.65f - t * 0.54f));
         else
 	{
@@ -357,7 +360,7 @@ void Ladspa_Moogvcf4::runproc (SampleCount len, bool add)
         p4 += k;
         len -= k;
 
-        t = exp2ap (_port [C_FMODG][0] * *p3 + _port [C_FREQ][0] + *p2 + 9.70f) / _fsam;
+        t = exp2ap (_port [C_FMODG][0] * *p3 + log2f(_port [C_FREQ][0]) - lg2midc + *p2 + 9.70f) / _fsam;
         if (t < 0.75f) t *= 1.005f - t * (0.624f - t * (0.65f - t * 0.54f));
         else
 	{

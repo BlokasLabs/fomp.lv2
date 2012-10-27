@@ -46,8 +46,8 @@ fomp:phaser1
 		a lv2:CVPort ,
 			lv2:InputPort ;
 		lv2:index 2 ;
-		lv2:name "Frequency Mod" ;
-		lv2:symbol "freq_mod"
+		lv2:name "FM" ;
+		lv2:symbol "fm"
 	] , [
 		a lv2:CVPort ,
 			lv2:InputPort ;

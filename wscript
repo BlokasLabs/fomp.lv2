@@ -4,7 +4,7 @@ import shutil
 import waflib.extras.autowaf as autowaf
 
 # Version of this package (even if built as a child)
-FOMP_VERSION = '0.0.0'
+FOMP_VERSION = '1.0.0'
 
 # Mandatory waf variables
 APPNAME = 'fomp'        # Package name for waf dist
@@ -31,7 +31,7 @@ def configure(conf):
     conf.env.pluginlib_PATTERN = pat
     conf.env.pluginlib_EXT = pat[pat.rfind('.'):]
 
-    autowaf.display_msg(conf, "LV2 bundle directory",
+    autowaf.display_msg(conf, 'LV2 bundle directory',
                         conf.env.LV2DIR)
     print('')
 

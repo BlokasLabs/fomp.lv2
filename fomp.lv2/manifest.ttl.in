@@ -59,6 +59,16 @@ fomp:cs_chorus2
 	rdfs:seeAlso <cs_chorus2.ttl> ;
 	lv2:binary <cs_chorus@LIB_EXT@> .
 
+fomp:cs_phaser1
+	a lv2:Plugin ;
+	rdfs:seeAlso <cs_phaser1.ttl> ;
+	lv2:binary <cs_phaser@LIB_EXT@> .
+
+fomp:cs_phaser1_lfo
+	a lv2:Plugin ;
+	rdfs:seeAlso <cs_phaser1_lfo.ttl> ;
+	lv2:binary <cs_phaser@LIB_EXT@> .
+
 fomp:triple_chorus
 	a lv2:Plugin ;
 	rdfs:seeAlso <triple_chorus.ttl> ;

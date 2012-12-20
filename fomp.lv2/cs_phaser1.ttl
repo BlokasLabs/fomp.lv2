@@ -4,7 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix units: <http://lv2plug.in/ns/extensions/units#> .
 
-fomp:phaser1
+fomp:cs_phaser1
 	a lv2:Plugin ,
 		lv2:PhaserPlugin ;
 	doap:name "CS Phaser 1" ;

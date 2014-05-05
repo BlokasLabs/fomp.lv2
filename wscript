@@ -81,3 +81,8 @@ def build(bld):
         build_plugin(bld, 'cxx', 'fomp.lv2', i,
                      ['src/%s.cc' % i,
                       'src/%s_lv2.cc' % i])
+    build_plugin(bld, 'cxx', 'fomp.lv2', 'reverbs',
+                 ['src/reverbs.cc',
+                  'src/pareq.cc',
+                  'src/zreverb.cc',
+                  'src/reverbs_lv2.cc'])

@@ -98,3 +98,13 @@ fomp:autowah
 	a lv2:Plugin ;
 	rdfs:seeAlso <autowah.ttl> ;
 	lv2:binary <autowah@LIB_EXT@> .
+
+fomp:reverb
+	a lv2:Plugin ;
+	rdfs:seeAlso <reverb.ttl> ;
+	lv2:binary <reverbs@LIB_EXT@> .
+
+fomp:reverb_amb
+	a lv2:Plugin ;
+	rdfs:seeAlso <reverb_amb.ttl> ;
+	lv2:binary <reverbs@LIB_EXT@> .

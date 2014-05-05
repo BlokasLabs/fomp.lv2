@@ -11,6 +11,7 @@ fomp:parametric1
 	lv2:microVersion 0 ;
 	lv2:minorVersion 0 ;
 	lv2:optionalFeature lv2:hardRTCapable ;
+	lv2:project fomp: ;
 	lv2:port [
 		a lv2:AudioPort ,
 			lv2:InputPort ;

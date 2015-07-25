@@ -4,9 +4,10 @@ fomp (1.1.0) unstable;
   * Fix port symbol for MVCLPF4 input gain
     (technically breaks state compatibility, but old symbol was an oversight)
   * Remove invalid reference to old LADSPA pulse_vco binary
+  * Add missing default values
   * Add reverb and reverb_amb
 
- -- David Robillard <d@drobilla.net>  Sat, 25 Jul 2015 13:03:27 -0400
+ -- David Robillard <d@drobilla.net>  Sat, 25 Jul 2015 13:23:20 -0400
 
 fomp (1.0.0) stable;
 

@@ -4,7 +4,7 @@ import shutil
 import waflib.extras.autowaf as autowaf
 
 # Version of this package (even if built as a child)
-FOMP_VERSION = '1.0.0'
+FOMP_VERSION = '1.1.0'
 
 # Mandatory waf variables
 APPNAME = 'fomp'        # Package name for waf dist

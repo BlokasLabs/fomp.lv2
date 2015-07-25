@@ -1,11 +1,12 @@
-fomp (1.0.1) unstable;
+fomp (1.1.0) unstable;
 
   * Fix phaser plugin data and list phasers in manifest
   * Fix port symbol for MVCLPF4 input gain
     (technically breaks state compatibility, but old symbol was an oversight)
+  * Remove invalid reference to old LADSPA pulse_vco binary
   * Add reverb and reverb_amb
 
- -- David Robillard <d@drobilla.net>  Mon, 23 Feb 2015 19:45:40 -0500
+ -- David Robillard <d@drobilla.net>  Sat, 25 Jul 2015 13:03:27 -0400
 
 fomp (1.0.0) stable;
 

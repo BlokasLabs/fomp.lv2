@@ -1,6 +1,7 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix fomp: <http://drobilla.net/plugins/fomp/> .
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix mod: <http://moddevices.com/ns/mod#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix units: <http://lv2plug.in/ns/extensions/units#> .
 
@@ -8,6 +9,8 @@ fomp:pulse_vco
 	a lv2:Plugin ,
 		lv2:OscillatorPlugin ;
 	doap:name "Pulse VCO" ;
+	mod:brand "FOMP" ;
+	mod:label "Pulse VCO" ;
 	lv2:microVersion 0 ;
 	lv2:minorVersion 0 ;
 	lv2:optionalFeature lv2:hardRTCapable ;

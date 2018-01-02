@@ -2,6 +2,7 @@
 @prefix fomp: <http://drobilla.net/plugins/fomp/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix mod: <http://moddevices.com/ns/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -11,6 +12,8 @@ fomp:reverb_amb
 	a lv2:Plugin ,
 		lv2:ReverbPlugin ;
 	doap:name "reverb-amb" ;
+	mod:brand "FOMP" ;
+	mod:label "Reverb Amb" ;
 	lv2:microVersion 0 ;
 	lv2:minorVersion 0 ;
 	lv2:optionalFeature lv2:hardRTCapable ;

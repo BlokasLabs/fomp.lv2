@@ -71,6 +71,11 @@ def build(bld):
         LIB_EXT      = bld.env.pluginlib_EXT,
         install_path = '${LV2DIR}/fomp.lv2')
 
+    bld.install_files('${LV2DIR}/fomp.lv2',
+        bld.path.ant_glob('fomp.lv2/modgui/**'),
+        cwd=bld.path.find_dir('fomp.lv2'),
+        relative_trick=True)
+
     plugins = ['autowah',
                'blvco',
                'cs_chorus',
